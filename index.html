@@ -41,10 +41,23 @@ h1{
   font-size: 50px;
 }
 
+.navbar-default {
+    background-color: #5BBCC9;
+    border-color: #5BBCC9;
+    padding-bottom: 50px;
+}
+.navbar-default .navbar-nav>li>a {
+  color: white;
+  font-size: 150%;
+}
+.navbar-default .navbar-brand {
+    color: white;
+    font-size: 150%;
+}
 
 .main{
   background-color: #5BBCC9;
-  padding-top: 100px;
+  padding-top: 0;
   padding-bottom: 100px;
   height: 100%
 }
@@ -195,22 +208,19 @@ body p{
 /***********************************************************************
 *  OPAQUE NAVBAR SECTION
 ***********************************************************************/
-.opaque-navbar {
+/*
+.navbar {
     background-color: rgba(0,0,0,0);
-  /* Transparent = rgba(0,0,0,0) / Translucent = (0,0,0,0.5)  */
-    height: 60px;
     border-bottom: 0px;
-    transition: background-color .5s ease 0s;
+    color: white;
 }
-
 .opaque-navbar.opaque {
     background-color: #d3f7fa;
-    height: 60px;
     transition: background-color .5s ease 0s;
 }
 
 ul.dropdown-menu {
-    background-color: black;
+    background-color: gray;
 }
 
 
@@ -220,18 +230,20 @@ ul.dropdown-menu {
     background:red;
   }
   .opaque-navbar {
-    background-color: black;
-    height: 60px;
+    background-color: gray;
+    height: 35px;
     transition: background-color .5s ease 0s;
 }
 
 }
-
+*/
 </style> 
+
 </head> 
 <body> 
 <script type="text/javascript"> 
 
+/*
     $(window).scroll(function() {
     if($(this).scrollTop() > 50) 
     {
@@ -239,7 +251,7 @@ ul.dropdown-menu {
     } else {
         $('.opaque-navbar').removeClass('opaque');
     }
-});
+});*/
 
 
   var Typer={
@@ -361,27 +373,31 @@ function t() {
  
 </script> 
 
-<!--<div class="navbar navbar-inverse navbar-fixed-top opaque-navbar">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navMain">
-    
-  </button>
-      <a class="navbar-brand" href="#">Your Company</a>
-    </div>
-    <div class="collapse navbar-collapse" id="navMain">
-      <ul class="nav navbar-nav pull-right">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Services and Pricing</a></li> 
-        <li><a href="#">Contact Us</a></li> 
-      </ul>
-    </div>
-  </div>
-</div>-->
-
-
 <div class="main">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Ruth Dolly</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Thoughts</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 <div class="terminal-window">
   <header>
     <div class="button green"></div>
