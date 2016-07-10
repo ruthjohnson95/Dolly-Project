@@ -1,6 +1,6 @@
 <span id="a">jeff@weisbein</span>:<span id="b">~</span><span id="c">$</span> cat About_Ruthie.txt <br/><br/>
-Hi, my name is Ruth Dolly Johnson!<!-- laglaglaglaglaglaglaglaglaglaglaglag --><p>I'm a senior at UCLA studying math/computer science and minoring in</p> <br/><!-- laglaglaglaglaglaglaglaglaglaglaglag --><p>bioinformatics.</p><!-- qowifjqwoeijfoqweijfqweoifjqweofijqweoqwoijefoqwijefoijfqiwoefjj -->
+Hi, my name is Ruth Dolly Johnson!<!-- laglaglaglaglaglaglaglaglaglaglaglag --><p>I'm a senior at UCLA studying math/computer science and minoring in</p> <br/><p>bioinformatics.</p><!-- laglaglaglaglaglaglaglaglaglaglaglag -->
 <p>I'm working at Sandia National Laboratories as a R&D Engineering Intern.</p><!-- laglaglaglaglaglaglaglaglaglaglaglag -->
 <p>Here's a bit of the work I have done. I also like to do some side projects <br/> and share my thoughts.</p><!-- owlsqweoifjqwoefijqwoeifjqwoefijwef -->
-If you would like to get in touch with me, whether it be for tech support, a business venture, or to just say hi<!-- slightdelayhere-->, feel free to send me an email.<!-- longlongcomment --> My email address is: <a href="mailto:jeff@besttechie.com">jeff@besttechie.com</a>
-<p>Fun Fact of the Day: I used to do competitive gymnastics. And yes, I can <!-- laglaglaglaglaglaglaglaglaglaglaglag -->still do a flip. <a href="http://www.besttechie.com">http://www.besttechie.com</a> and analytics startup <a href="https://getkya.com">https://getkya.com</a>.</p>
+Feel free to connect or just say hi through <a href="mailto:ruthjohnson@ucla.edu">email</a>,  <a href="mailto:ruthjohnson@ucla.edu">Github</a>, or  <a href="mailto:ruthjohnson@ucla.edu">LinkedIn</a>.
+<p>Fun Fact of the Day: I used to do competitive gymnastics. And yes, I can <br/>still do a flip. You can see some more cool flips <a href="http://www.besttechie.com">here.</a> </p>
