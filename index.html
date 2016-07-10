@@ -25,7 +25,7 @@ THE SOFTWARE.
 <title>Ruth Johnson</title> 
 
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <style type="text/css"> 
@@ -36,14 +36,20 @@ p, h1, h2, h3, h4, h5{
   color: #092930;
 }
 
+h1{
+  font-weight: 600;
+  font-size: 50px;
+}
+
 
 .main{
+  background-color: #5BBCC9;
   padding-top: 100px;
   padding-bottom: 100px;
   height: 100%
 }
   body {
-  background: #5BBCC9;
+  backgrond-color: #2C3E50;
   font-family: Lato;
 }
 body p{
@@ -51,14 +57,26 @@ body p{
 }
 .highlights{
   margin: auto;
-  width: 60%;
+  width: 70%;
 }
 
+#highlights{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+#sub_heading{
+  color: #5BBCC9;
+  padding-bottom: 50px;
+}
 .highlights img{
   height: 225px;
   width: 325px;
-  padding-right: 10px;
+  padding-right: 35px;
   border-radius: 5%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
 }
 
 .highlights p{
@@ -66,7 +84,7 @@ body p{
 }
 
 .highlights h3{
-  color: #2C3E50;
+ color: #2C3E50;
 }
 
 .highlights h4{
@@ -76,9 +94,12 @@ body p{
 .panel2{
   background-color: white;
 }
+
 .media-body{
-  padding-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
+
 .terminal-window {
   text-align: left;
   width: 650px;
@@ -154,8 +175,21 @@ body p{
   }
 
   footer {
-    height: 100px;
-    background-color: gray;
+    height: 175px;
+    background-color: #2C3E50;
+    color: #E9D460;
+    text-align: center;
+  }
+  #thank_you{
+    padding-top: 50px;
+  }
+  .icons{
+    margin:  0 auto;
+    padding-top: 30px;
+  }
+  .icons img{
+    padding-right:15px;
+    padding-left: 15px;
   }
 
 
@@ -362,8 +396,9 @@ function t() {
 </div>
 
 <div class="panel2">
-<h1>>> Highlights</h1>
 <div class="highlights">
+<h1 id="highlights">
+<span class="glyphicon glyphicon-menu-left" style="color:#092930;"></span>Highlights<span class="glyphicon glyphicon-menu-right" style="color:#092930;"></span></h1>
 <div class="media">
   <div class="media-left media-middle">
     <a href="#">
@@ -380,7 +415,7 @@ function t() {
 <div class="media">
   <div class="media-left media-middle">
     <a href="#">
-      <img class="media-object" src="img/week2.png" alt="Generic placeholder image">
+      <img class="media-object" src="img/week3.png" alt="Generic placeholder image">
     </a>
   </div>
   <div class="media-body">
@@ -403,7 +438,9 @@ function t() {
   </div>
 </div>
 
-<h3>>>Learn about the rest of my Work</h3>
+<h3 id="sub_heading"><span class="glyphicon glyphicon-menu-right" style="color:#5BBCC9;"></span> 
+    <span class="glyphicon glyphicon-menu-right" style="color:#5BBCC9;"></span>
+    Learn about the rest of my Work</h3>
 
 <div class="media">
   <div class="media-left media-middle">
@@ -431,7 +468,9 @@ function t() {
   </div>
 </div>
 
-<h2> >> See the rest of my Projects</h2>
+<h3 id="sub_heading"><span class="glyphicon glyphicon-menu-right" style="color:#5BBCC9;"></span> 
+    <span class="glyphicon glyphicon-menu-right" style="color:#5BBCC9;"></span>
+    See the rest of my Projects</h3>
 
 <div class="media">
   <div class="media-left media-middle">
@@ -445,11 +484,22 @@ function t() {
     <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
   </div>
 </div>
-<h2> >> Read the rest of my Thoughts</h2>
+<h3 id="sub_heading"><span class="glyphicon glyphicon-menu-right" style="color:#5BBCC9;"></span> 
+    <span class="glyphicon glyphicon-menu-right" style="color:#5BBCC9;"></span>
+    Read the rest of my Thoughts</h3>
 </div>
 
 <footer>
-
+  <div>
+  <h3 id="thank_you"> Thanks for stopping by!</h3>
+  <div class="icons">
+    <img src="img/github.png">
+    <img src="img/email.png">
+    <img src="img/twitter.png">
+    <img src="img/linkedin.png">
+    <img src="img/pencil.png">
+  </div>
+  </div>
 </footer>
 </div>
 <script type="text/javascript">
