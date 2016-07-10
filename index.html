@@ -29,6 +29,13 @@ THE SOFTWARE.
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <style type="text/css"> 
+<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+p, h1, h2, h3, h4, h5{
+  font-family: Lato;
+  color: #092930;
+}
+
 
 .main{
   padding-top: 100px;
@@ -36,12 +43,15 @@ THE SOFTWARE.
   height: 100%
 }
   body {
-  background: #59ABE3;
+  background: #5BBCC9;
+  font-family: Lato;
+}
+body p{
+  font-weight: 200;
 }
 .highlights{
   margin: auto;
   width: 60%;
-  background-color: white;
 }
 
 .highlights img{
@@ -55,10 +65,20 @@ THE SOFTWARE.
   font-size: 17px;
 }
 
-.highlights h4{
-  color: #663399;
+.highlights h3{
+  color: #2C3E50;
 }
 
+.highlights h4{
+  color: #5BBCC9;
+}
+
+.panel2{
+  background-color: white;
+}
+.media-body{
+  padding-bottom: 15px;
+}
 .terminal-window {
   text-align: left;
   width: 650px;
@@ -151,7 +171,7 @@ THE SOFTWARE.
 }
 
 .opaque-navbar.opaque {
-    background-color: #26C281;
+    background-color: #d3f7fa;
     height: 60px;
     transition: background-color .5s ease 0s;
 }
@@ -308,11 +328,10 @@ function t() {
  
 </script> 
 
-<div class="navbar navbar-inverse navbar-fixed-top opaque-navbar">
+<!--<div class="navbar navbar-inverse navbar-fixed-top opaque-navbar">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navMain">
-  <span class="glyphicon glyphicon-chevron-right" style="color:white;"></span>
     
   </button>
       <a class="navbar-brand" href="#">Your Company</a>
@@ -326,9 +345,8 @@ function t() {
       </ul>
     </div>
   </div>
-</div>
+</div>-->
 
-<h2> Welcome! </h2>
 
 <div class="main">
 <div class="terminal-window">
@@ -343,6 +361,7 @@ function t() {
 </div>
 </div>
 
+<div class="panel2">
 <h1>>> Highlights</h1>
 <div class="highlights">
 <div class="media">
@@ -432,7 +451,7 @@ function t() {
 <footer>
 
 </footer>
-
+</div>
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
