@@ -1,0 +1,441 @@
+<html>
+<head>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<style type="text/css">
+	* {
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+  font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
+  color: #E0E8F0;
+}
+
+.wrapper {
+  margin: 5em auto;
+  max-width: 1000px;
+}
+
+.header {
+  padding: 30px 30px 0;
+  text-align: center;
+}
+.header__title {
+  margin: 0;
+  font-size: 4.5em;
+  font-weight: bold;
+  line-height: 1.1;
+  font-family: Lato;
+  color: #30353A;
+  padding-bottom: 30px;
+}
+.header__subtitle {
+  margin: 0;
+  font-size: 1.5em;
+  color: #5BBCC9;
+  font-family: 'Yesteryear', cursive;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.cards {
+  padding: 15px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.card {
+  margin: 10px;
+  width: calc((100% / 3) - 30px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+@media screen and (max-width: 991px) {
+  .card {
+    width: calc((100% / 2) - 30px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .card {
+    width: 100%;
+  }
+}
+.card:hover .card__inner {
+  background-color: #3595a2;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.card__inner h4 {
+  font-size: .75em;
+}
+.card__inner {
+  width: 100%;
+  padding-top: 40px;
+  height: 230px;
+  position: relative;
+  cursor: pointer;
+  background-color: #5BBCC9;
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.card__inner:after {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.card__expander {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-color: #E0E8F0;
+  width: 100%;
+  /*position: relative;
+  display: flex;*/
+  -webkit-box-pack: left;
+  -webkit-justify-content: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  /*align-items: center;*/
+  color: #30353A;
+  font-size: 1.2em;
+}
+.card__expander .fa {
+  font-size: 0.75em;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+.card__expander .fa:hover {
+  opacity: 0.9;
+}
+.card.is-collapsed .card__inner:after {
+  content: "";
+  opacity: 0;
+}
+.card.is-collapsed .card__expander {
+  max-height: 0;
+  min-height: 0;
+  overflow: hidden;
+  margin-top: 0;
+  opacity: 0;
+}
+.card.is-expanded .card__inner {
+  background-color: #3595a2;
+}
+.card.is-expanded .card__inner:after {
+  content: "";
+  opacity: 1;
+  display: block;
+  height: 0;
+  width: 0;
+  position: absolute;
+  bottom: -30px;
+  left: calc(50% - 15px);
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #E0E8F0;
+}
+.card.is-expanded .card__inner .fa:before {
+  content: "\f115";
+}
+.card.is-expanded .card__expander {
+  max-height: 1000px;
+  min-height: 200px;
+  overflow: visible;
+  margin-top: 30px;
+  opacity: 1;
+}
+.card.is-expanded:hover .card__inner {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.card.is-inactive .card__inner {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.card.is-inactive:hover .card__inner {
+  background-color: #5BBCC9;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+@media screen and (min-width: 992px) {
+  .card:nth-of-type(3n+2) .card__expander {
+    margin-left: calc(-100% - 30px);
+  }
+
+  .card:nth-of-type(3n+3) .card__expander {
+    margin-left: calc(-200% - 60px);
+  }
+
+  .card:nth-of-type(3n+4) {
+    clear: left;
+  }
+
+  .card__expander {
+    width: calc(300% + 60px);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .card:nth-of-type(2n+2) .card__expander {
+    margin-left: calc(-100% - 30px);
+  }
+
+  .card:nth-of-type(2n+3) {
+    clear: left;
+  }
+
+  .card__expander {
+    width: calc(200% + 30px);
+  }
+}
+#icon {
+  padding-top: 20px;
+  /*color: #ff0096;*/
+}
+
+#list {
+  padding-top: 25px;
+}
+
+#star {
+  color: #E9D460;
+}
+
+#pink {
+  color: #ff0096;
+}
+
+</style>
+
+<script type="text/javascript">
+	var $cell = $('.card');
+
+//open and close card when clicked on card
+$cell.find('.js-expander').click(function() {
+
+  var $thisCell = $(this).closest('.card');
+
+  if ($thisCell.hasClass('is-collapsed')) {
+    $cell.not($thisCell).removeClass('is-expanded').addClass('is-collapsed').addClass('is-inactive');
+    $thisCell.removeClass('is-collapsed').addClass('is-expanded');
+    
+    if ($cell.not($thisCell).hasClass('is-inactive')) {
+      //do nothing
+    } else {
+      $cell.not($thisCell).addClass('is-inactive');
+    }
+
+  } else {
+    $thisCell.removeClass('is-expanded').addClass('is-collapsed');
+    $cell.not($thisCell).removeClass('is-inactive');
+  }
+});
+
+//close card when click on cross
+$cell.find('.js-collapser').click(function() {
+
+  var $thisCell = $(this).closest('.card');
+
+  $thisCell.removeClass('is-expanded').addClass('is-collapsed');
+  $cell.not($thisCell).removeClass('is-inactive');
+
+});
+</script>
+
+</head>
+<div class="wrapper">
+  <div class="header">
+    <h1 class="header__title">
+      <span id="pink">[</span> Projects <span id="pink">]</span>
+    </h1>
+  </div>
+
+  <div class="cards">
+
+    <div class=" card [ is-collapsed ] ">
+      <div class="card__inner [ js-expander ]">
+        <span>Alexa M.D.</span>
+        <h4>Virtual reality based health treatment</h4>
+        <span class="glyphicon glyphicon-heart-empty" id="icon"></span>
+      </div>
+      <div class="card__expander">
+        <i class="fa fa-close [ js-collapser ]"></i>  
+        <div class="col-sm-4">
+        <h3>Alexa M.D.</h3> 
+          <h4><span id="star" class="glyphicon glyphicon-star"></span> Best Healthcare Wearable Hack/ Best use of Amazon Alexa</h4>
+        <h4>TreeHacks 2016</h4>
+          <span class="glyphicon glyphicon-link"></span>
+          <span class="glyphicon glyphicon-folder-open"></span>
+        </div>
+        <div class="col-sm-8" id="list">
+          <li>Created a mental health treatment application by setting up a virtual environment for exposure therapy using the Amazon Echo and Oculus Rift.</li>
+          <li>Also designed an automated medicine dispenser using Intel Edison, 3D printing, and laser cutting.</li>
+        </div>
+      </div>
+    </div>
+
+    <div class=" card [ is-collapsed ] ">
+      <div class="card__inner [ js-expander ]">
+        <span>RoboHome</span>
+        <h4>IoT inspired model home</h4>
+          <span class="glyphicon glyphicon-home" id="icon"></span>
+      </div>
+      <div class="card__expander">
+        <i class="fa fa-close [ js-collapser ]"></i>
+        <div class="col-sm-4">
+        <h3>RoboHome</h3> 
+          <h4><span class="glyphicon glyphicon-star" id="star"></span> 1st Place Overall Winner</h4>
+        <h4>IDEA Hacks 2016</h4>
+          <span class="glyphicon glyphicon-link"></span>
+          <span class="glyphicon glyphicon-folder-open"></span>
+        </div>
+        <div class="col-sm-8" id="list">
+          <li>IoT themed smart home model implementing automatic lighting, doors, T.V., and "shower" through an Android app, Myo armband, and website.</li>
+          <li>Powered through Arduino Uno, and assembled using 3D printing and soldering.</li>
+        </div>
+      </div>
+    </div>
+
+    <div class=" card [ is-collapsed ] ">
+      <div class="card__inner [ js-expander ]">
+        <span>MyoMessenger</span>
+        <h4>Inspriring a safer driving experience</h4>
+        <span class="glyphicon glyphicon-comment"></span>
+      </div>
+      <div class="card__expander">
+        <i class="fa fa-close [ js-collapser ]"></i>
+       <div class="col-sm-4">
+        <h3>MyoMessenger</h3> 
+          <h4><span id="star" class="glyphicon glyphicon-star"></span> Top 4 Finalists</h4>
+        <h4>Cal Hacks 2.0</h4>
+          <span class="glyphicon glyphicon-link"></span>
+          <span class="glyphicon glyphicon-folder-open"></span>
+        </div>
+        <div class="col-sm-8" id="list">
+          <li>Designed an app to create a safer driving expereience by using the Myo armband to send messages through hand gestures.</li>
+          <li>Also used the Muse headband to detect and notify drivers when they are falling asleep.</li>
+        </div>
+      </div>
+    </div>
+
+    <div class=" card [ is-collapsed ] ">
+      <div class="card__inner [ js-expander ]">
+        <span>Happy Hour</span>
+        <h4>Keep track of the night</h4>
+        <span class="glyphicon glyphicon-time" id="icon"></span>
+      </div>
+      <div class="card__expander">
+        <i class="fa fa-close [ js-collapser ]"></i>
+        <div class="col-sm-4">
+        <h3>MyoMessenger</h3> 
+          <h4><span class="glyphicon glyphicon-star"></span> Top 4 Finalists</h4>
+        <h4>Cal Hacks 2.0</h4>
+          <span class="glyphicon glyphicon-link"></span>
+          <span class="glyphicon glyphicon-folder-open"></span>
+        </div>
+        <div class="col-sm-8" id="list">
+          <li>Designed an app to create a safer driving expereience by using the Myo armband to send messages through hand gestures.</li>
+          <li>Also used the Muse headband to detect and notify drivers when they are falling asleep.</li>
+        </div>
+      </div>
+    </div>
+
+    <div class=" card [ is-collapsed ] ">
+      <div class="card__inner [ js-expander ]">
+        <span>Freeloader</span>
+        <h4>Free stuff. One place.</h4>
+        <span id="icon" class="glyphicon glyphicon-usd"></span>
+      </div>
+      <div class="card__expander">
+        <i class="fa fa-close [ js-collapser ]"></i>
+        <div class="col-sm-4">
+        <h3>Freeloader</h3> 
+          <h4><span id="star" class="glyphicon glyphicon-star"></span> Winner Popular Choice</h4>
+        <h4>SB Hacks 2015</h4>
+          <span class="glyphicon glyphicon-link"></span>
+          <span class="glyphicon glyphicon-folder-open"></span>
+        </div>
+        <div class="col-sm-8" id="list">
+          <li>Designed an app to create a safer driving expereience by using the Myo armband to send messages through hand gestures.</li>
+          <li>Also used the Muse headband to detect and notify drivers when they are falling asleep.</li>
+        </div>
+      </div>
+    </div>
+
+    <div class=" card [ is-collapsed ] ">
+      <div class="card__inner [ js-expander ]">
+        <span>SafeSteps</span>
+        <h4>Safety right on your wrist.</h4>
+        <span id="icon" class = "glyphicon glyphicon-warning-sign"></span>
+      </div>
+      <div class="card__expander">
+        <i class="fa fa-close [ js-collapser ]"></i>
+<div class="col-sm-4">
+        <h3>SafeSteps</h3> 
+          <h4>Winner Popular Choice</h4>
+        <h4>Hack the Planet 2015</h4>
+          <span class="glyphicon glyphicon-link"></span>
+          <span class="glyphicon glyphicon-folder-open"></span>
+        </div>
+        <div class="col-sm-8" id="list">
+          <li>Designed an app to create a safer driving expereience by using the Myo armband to send messages through hand gestures.</li>
+          <li>Also used the Muse headband to detect and notify drivers when they are falling asleep.</li>
+        </div>
+      </div>
+    </div>
+
+    <div class=" card [ is-collapsed ] ">
+      <div class="card__inner [ js-expander ]">
+        <span>Daily Bruin Sites</span>
+        <h4>Portfolio of flatpages</h4>
+        <span id="icon" class="glyphicon glyphicon-list-alt"></span>
+      </div>
+      <div class="card__expander">
+        <i class="fa fa-close [ js-collapser ]"></i>
+       <div class="col-sm-4">
+        <h3>SafeSteps</h3> 
+          <span class="glyphicon glyphicon-link"></span>
+          <span class="glyphicon glyphicon-folder-open"></span>
+        </div>
+        <div class="col-sm-8" id="list">
+          <li>Designed an app to create a safer driving expereience by using the Myo armband to send messages through hand gestures.</li>
+          <li>Also used the Muse headband to detect and notify drivers when they are falling asleep.</li>
+        </div>
+      </div>
+    </div>
+
+    <div class=" card [ is-collapsed ] ">
+      <div class="card__inner [ js-expander ]">
+        <span>Card</span>
+        <i class="fa fa-folder-o"></i>
+      </div>
+      <div class="card__expander">
+        <i class="fa fa-close [ js-collapser ]"></i>
+        Expander
+      </div>
+    </div>
+
+    <div class=" card [ is-collapsed ] ">
+      <div class="card__inner [ js-expander ] ">
+        <span>Card</span>
+        <i class="fa fa-folder-o"></i>
+      </div>
+      <div class="card__expander">
+        <i class="fa fa-close [ js-collapser ]"></i>
+        <p>Expander</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+</html>
