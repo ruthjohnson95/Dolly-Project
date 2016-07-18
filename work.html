@@ -31,6 +31,20 @@ html * {
   box-sizing: border-box;
 }
 
+.navbar-default {
+	background-color: white;
+	border-color: #E0E8F0;
+	padding-top: 15px;
+}
+.navbar {
+    min-height: 30px;
+}
+.navbar-default .navbar-nav>li>a {
+color: #2C3E50;
+font-size: 125%;
+font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
+}
+
 body {
   font-size: 100%;
   font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
@@ -60,7 +74,7 @@ Modules - reusable parts of our design
 -------------------------------- */
 .cd-container {
   /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
-  width: 90%;
+  width: 65%;
   max-width: 1170px;
   margin: 0 auto;
 }
@@ -80,9 +94,13 @@ header {
   text-align: center;
 }
 header h1 {
-  color: #303e49;
-  font-weight: bold;
-  font-size: 3.5em; 
+  margin: 0;
+  font-size: 4.5em;
+  font-weight: 500;
+  line-height: 1.1;
+  font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
+  color: #30353A;
+  padding-top: 50px;
 }
 @media only screen and (min-width: 1170px) {
   header {
@@ -137,7 +155,7 @@ header h1 {
 .cd-timeline-block:last-child {
   margin-bottom:4em 0;
 }
-@media only screen and (min-width: 1170px) {
+@media only screen and () {
   .cd-timeline-block {
     margin: 4em 0;
   }
@@ -325,10 +343,10 @@ header h1 {
   }
 }
 
-@media only screen and (min-width: 1170px) {
+@media only screen and () {
   .cd-timeline-content {
     padding: 1.6em;
-    width: 80%;
+    width: 65%;
   } 
   .cd-timeline-content .cd-read-more {
     /*float: left;*/
@@ -371,7 +389,7 @@ header h1 {
   }
 }
 
-@media only screen and (min-width: 1170px) {
+@media only screen and () {
   /* inverse bounce effect on even content blocks */
   .cssanimations .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {
     -webkit-animation: cd-bounce-2-inverse 0.6s;
@@ -511,6 +529,24 @@ footer {
     padding-right:15px;
     padding-left: 15px;
   }
+.button {
+  width: 14px;
+  height: 14px;
+  margin: 10px 4px 0 0;
+  display: inline-block;
+  border-radius: 8px;
+}  
+.button.green {
+  background: #3BB662;
+}
+
+.button.yellow {
+  background: #E5C30F;
+}
+
+.button.red {
+  background: #E75448;
+}
 	</style>
 </head>
 <body>
@@ -518,13 +554,15 @@ footer {
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
+    <div class="button green"></div>
+    <div class="button yellow"></div>
+    <div class="button red"></div>
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Ruth Dolly</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->

@@ -20,9 +20,9 @@ body {
 .header__title {
   margin: 0;
   font-size: 4.5em;
-  font-weight: bold;
+  font-weight: 500;
   line-height: 1.1;
-  font-family: Lato;
+  font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
   color: #30353A;
   padding-bottom: 30px;
 }
@@ -226,3 +226,34 @@ body {
     padding-right:15px;
     padding-left: 15px;
   }
+.button {
+  width: 14px;
+  height: 14px;
+  margin: 10px 4px 0 0;
+  display: inline-block;
+  border-radius: 8px;
+}  
+.button.green {
+  background: #3BB662;
+}
+
+.button.yellow {
+  background: #E5C30F;
+}
+
+.button.red {
+  background: #E75448;
+}
+.navbar-default {
+  background-color: white;
+  border-color: #E0E8F0;
+  padding-top: 15px;
+}
+.navbar {
+    min-height: 30px;
+}
+.navbar-default .navbar-nav>li>a {
+color: #2C3E50;
+font-size: 125%;
+font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
+}
