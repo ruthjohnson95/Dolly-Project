@@ -1,0 +1,239 @@
+$light-gray: white;
+$gray: #5BBCC9;
+$slate: #E0E8F0;
+$turquoise: darken(#5BBCC9, 15%);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: $light-gray;
+  font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
+  color: $slate;
+}
+
+.wrapper {
+  margin: 5em auto;
+  max-width: 1000px;
+}
+
+.header {
+  padding: 30px 30px 0;
+  text-align: center;
+
+  &__title {
+    margin: 0;
+    font-size: 4.5em;
+    font-weight: bold;
+    line-height: 1.1;
+    font-family: Lato;
+    color: #30353A; 
+    padding-bottom: 30px;
+  }
+  &__subtitle {
+    margin: 0;
+    font-size: 1.5em;
+    color: $gray;
+    font-family: 'Yesteryear', cursive;
+    font-weight: 500;
+    line-height: 1.1;
+  }
+}
+
+//Grid Container
+.cards {
+  padding: 15px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+//Cards
+.card {
+  margin: 10px; 
+  width: calc((100% / 3) - 30px);
+  transition: all 0.2s ease-in-out;
+
+  //media queries for stacking cards
+  @media screen and (max-width: 991px) {
+    width: calc((100% / 2) - 30px);
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+
+  &:hover {
+    .card__inner {
+      background-color: $turquoise;
+      transform: scale(1.05);
+    }
+  }
+
+  &__inner h4{
+    font-size: .75em;
+  }
+  
+  &__inner {
+    width: 100%;
+    padding-top: 40px;
+    height: 230px;
+    position: relative;
+    cursor: pointer;
+    background-color: $gray;
+    color: $light-gray;
+    font-size: 1.5em;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    
+    &:after {
+      transition: all 0.3s ease-in-out;
+    }
+    
+  }
+  //Expander
+  &__expander {
+    transition: all 0.2s ease-in-out;
+    background-color: $slate;
+    width: 100%;
+    /*position: relative;
+    display: flex;*/
+    justify-content: left;
+    /*align-items: center;*/
+    color: #30353A;
+    font-size: 1.2em;
+    
+    .fa {
+      font-size: 0.75em;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+
+  &.is-collapsed {
+    
+    .card__inner {
+      &:after {
+        content: "";
+        opacity: 0;
+      }
+    }
+    .card__expander {
+      max-height: 0;
+      min-height: 0;
+      overflow: hidden;
+      margin-top: 0;
+      opacity: 0;
+    }
+  }
+
+  &.is-expanded {
+
+    .card__inner {
+      background-color: $turquoise;
+      
+      &:after{
+        content: "";
+        opacity: 1;
+        display: block;
+        height: 0;
+        width: 0;
+        position: absolute;
+        bottom: -30px;
+        left: calc(50% - 15px);
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 15px solid #E0E8F0;
+      }
+      
+      //folder open icon
+      .fa:before {
+        content: "\f115";
+      }
+    }
+
+    .card__expander {
+      max-height: 1000px;
+      min-height: 200px;
+      overflow: visible;
+      margin-top: 30px;
+      opacity: 1;
+    }
+
+    &:hover {
+      .card__inner {
+        transform: scale(1);
+      }
+    }
+  }
+  
+  &.is-inactive {
+    .card__inner {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+    
+    &:hover {
+      .card__inner {
+        background-color: $gray;
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+
+//Expander Widths
+
+//when 3 cards in a row
+@media screen and (min-width: 992px) {
+
+  .card:nth-of-type(3n+2) .card__expander {
+    margin-left: calc(-100% - 30px);
+  }
+  .card:nth-of-type(3n+3) .card__expander {
+    margin-left: calc(-200% - 60px);
+  }
+  .card:nth-of-type(3n+4) {
+    clear: left;
+  }
+  .card__expander {
+    width: calc(300% + 60px);
+  }
+
+}
+
+//when 2 cards in a row
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+  .card:nth-of-type(2n+2) .card__expander {
+    margin-left: calc(-100% - 30px);
+  }
+  .card:nth-of-type(2n+3) {
+    clear: left;
+  }
+  .card__expander {
+    width: calc(200% + 30px);
+  }
+
+}
+
+#icon{
+  padding-top: 20px;
+  /*color: #ff0096;*/
+}
+#list{
+  padding-top: 25px;
+}
+#star{
+  color: #E9D460;
+}
+#pink{
+  color: #ff0096;
+}
