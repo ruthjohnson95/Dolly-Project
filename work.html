@@ -21,16 +21,11 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-    <div class="button green"></div>
-    <div class="button yellow"></div>
-    <div class="button red"></div>
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+    <a href="index.html"><div class="navbar-header"></a>
+    <a href="index.html"><div class="button green"></div></a>
+    <a href="index.html"><div class="button yellow"></div></a>
+    <a href="index.html"><div class="button red"></div></a>
+    
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -39,7 +34,6 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="work.html">Work</a></li>
         <li><a href="code.html">Code</a></li>
-        <li><a href="#">Thoughts</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -54,12 +48,12 @@
 	<section id="cd-timeline" class="cd-container">
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-picture">
-				<img src="img/twitter.png">
+				<img src="img/rocket.png">
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
 				<h2>Sandia National Laboratories</h2>
-        <h4>R&D Software Engineering Intern</h4>
+        <h4 id="position">R&D Software Engineering Intern</h4>
 				<p>I am currently interning in New Mexico with the Center for Analysis Systems and Applications. My current projects focus on mission applications, including enterprise software and developing data analysis techniques.</p>
 				<!--<a href="#0" class="cd-read-more">Read more</a>-->
 				<span class="cd-date">June 2016 - August 2016</span>
@@ -68,12 +62,12 @@
 
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-movie">
-				<img src="img/twitter.png">
+				<img src="img/dna.png">
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
 				<h2>Bogdan Population Genetics Lab</h2>
-        <h4>Undergraduate Researcher</h4>
+        <h4 id="position">Undergraduate Researcher</h4>
 				<p>I recently joined a bioinformatics lab that focuses on developing software for advancing techniques in population genetics. I created a command-line based data visualization tool that plots the relationships between SNPs. This tool is utilized in a paper we recently submitted to the Bioinformatics Journal.</p>
 				<!--<a href="#0" class="cd-read-more">Read more</a>-->
 				<span class="cd-date">March 2016 - June 2016</span>
@@ -82,11 +76,12 @@
 
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-picture">
-				<img src="img/twitter.png">
+				<img src="img/pi.png">
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
 				<h2>MATH 88S: Mathematics & Movies</h2>
+				<h4 id="position">Facilitator</h4>
 				<p>This past quarter, I had the pleasure to teach my own undergraduate course at UCLA. I wanted to teach students that math has so many possibilities, and that the subject doesn't have to be mired in complex computations. I created and taught a course that combined 10 topics from pop-culture movies with 10 mathematical concepts, such as graph theory, cryptography, game theory, and more. </p>
 				<!--<a href="#0" class="cd-read-more">Read more</a>-->
 				<span class="cd-date">April 2015 - June 2016</span>
@@ -95,12 +90,12 @@
 
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-location">
-				<img src="img/twitter.png">
+				<img src="img/research.png">
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
 				<h2>Center for Tropical Research</h2>
-        <h4>Undergrduate Research Assistant</h4>
+        <h4 id="position">Undergrduate Research Assistant</h4>
 				<p>Obtained and analyzed RADseq data by using Stacks software on a computing cluster. Parsedlog files using bash scripts to extract and compare efficiency of different parameters. Used software pipeline to filter reads, eliminate PCR duplicates, and identify loci through denovo mapping techniques.</p>
 				<!--<a href="#0" class="cd-read-more">Read more</a>-->
 				<span class="cd-date">October 2015 - June 2016</span>
@@ -109,12 +104,12 @@
 
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-location">
-				<img src="img/twitter.png">
+				<img src="img/news.png">
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
 				<h2>Daily Bruin</h2>
-        <h4>Web Developer</h4>
+        <h4 id="position">Web Developer</h4>
 				<p>Updated Daily Bruin site on daily basis including publishing breaking news and maintaining main site. Created flatpages for quarterly events and projects. </p>
 				<!--<a href="#0" class="cd-read-more">Read more</a>-->
 				<span class="cd-date">October 2015 - Juen 2016</span>
@@ -122,6 +117,21 @@
 		</div> <!-- cd-timeline-block -->
 			
 		</div> <!-- cd-timeline-block -->
+
+	<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-location">
+				<img src="img/resume-24.png">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				
+        	<h2>Resume</h2>
+        	<h4 id="position">click <a href="resume.pdf" style="color:#30353A;" target="_blank">here</a> to download</h4>
+				<span class="cd-date">updated July 2016</span>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+			
+		</div> <!-- cd-timeline-block -->	
 	</section> <!-- cd-timeline -->
   
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -130,13 +140,13 @@
 
 <footer>
   <div>
-  <h3 id="thank_you"> Thanks for stopping by!</h3>
+  <p id="thank_you"> Thanks for stopping by!</p>
   <div class="icons">
-    <img src="img/github.png">
-    <img src="img/email.png">
-    <img src="img/twitter.png">
-    <img src="img/linkedin.png">
-    <img src="img/pencil.png">
+    <a href="https://github.com/ruthjohnson95"><img src="img/github-24.png"></a>
+    <a href="mailto:ruthjohnson@ucla.edu"><img src="img/email-24.png"></a>
+    <a href="https://twitter.com/ruthie_johnson"><img src="img/twitter-24.png"></a>
+    <a href="https://www.linkedin.com/in/ruthjohnson13"><img src="img/linkedin-24.png"></a>
+    <a href="https://medium.com/@ruthiejohnson"><img src="img/pencil-24.png"></a>
   </div>
   </div>
 </footer>

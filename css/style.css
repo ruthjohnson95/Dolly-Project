@@ -172,3 +172,12 @@ body p{
     padding-right:15px;
     padding-left: 15px;
   }
+  .skip{
+  text-align: left;
+  width: 650px;
+  height: 100px;
+  border-radius: 10px;
+  margin: auto;
+  position: relative;
+
+  }

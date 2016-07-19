@@ -71,9 +71,10 @@ body {
   font-size: .75em;
 }
 .card__inner {
+  border-radius: 0.25em;
   width: 100%;
   padding-top: 40px;
-  height: 230px;
+  height: 200px;
   position: relative;
   cursor: pointer;
   background-color: #8cd0d9;
@@ -148,6 +149,7 @@ body {
   overflow: visible;
   margin-top: 30px;
   opacity: 1;
+  border-radius: 0.25em;
 }
 .card.is-expanded:hover .card__inner {
   -webkit-transform: scale(1);
@@ -256,4 +258,12 @@ body {
 color: #2C3E50;
 font-size: 125%;
 font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
+}
+.col-sm-4{
+  padding-left: 30px;
+  padding-top: 10px;
+  }
+
+a{
+  color:#2C3E50;
 }
