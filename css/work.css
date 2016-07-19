@@ -275,7 +275,7 @@ header h1 {
   display: inline-block;
 }
 .cd-timeline-content p {
-  margin: 1em 0;
+  margin: 1.2em 0;
   line-height: 1.6;
 }
 .cd-timeline-content .cd-read-more {
@@ -311,10 +311,10 @@ header h1 {
     
   }
   .cd-timeline-content p {
-    font-size: 1.0em;
+    font-size: 1.2em;
   }
   .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
-    font-size: 1.0em;
+    font-size: 1.2em;
     font-size: 0.875rem;
   }
 }
@@ -528,4 +528,6 @@ footer {
   padding-top: 10px;
   font-weight: 800;
 }
-
+h4{
+  font-size: 1.2em;
+}
